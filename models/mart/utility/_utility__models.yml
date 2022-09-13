@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: dates__daily
+    description: Includes a daily date from 2020-10-01 (first order date) to current date
+    columns:
+      - name: date_day
+        description: date for each day in the time period

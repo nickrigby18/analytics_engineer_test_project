@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_acme1__recharge_subscriptions
+    columns:
+      - name: order_id
+        description: Unique identifier for the order
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        description: Customer identifier unique to individual customer
+      - name: subscription_price
+        description: Price paid by customer for subscription
+      - name: subscription_quantity
+        description: Quantity of subscriptions purchased
+      - name: subscription_interval_unit
+        description: Length of subscription (Day, Week, or Month)
+      - name: subscription_status
+        description: Indicates if the subscription is active or inactive
+      - name: created_at
+        description: Timestamp when the order was created
+      - name: updated_at
+        description: Timestamp when the order was last updated
+      - name: cancelled_at
+        description: Timestamp when the order was cancelled
+      - name: created_at_date
+        description: Date when the order was created
+      - name: updated_at_date
+        description: Date when the order was last updated
+      - name: cancelled_at_date
+        description: Date when the order was cancelled

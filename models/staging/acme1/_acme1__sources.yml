@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw_data_sandbox
+    description: >
+      Where sample data is loaded for coding exercises
+    tables:
+      - name: acme1_recharge_subscriptions
+        description: >
+          Contains order level details at one record per order placed
+        freshness: 
+          warn_after: {count: 2, period: day}
+        loaded_at_field: _etl_loaded_at
